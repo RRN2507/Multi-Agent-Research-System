@@ -1,0 +1,14 @@
+langgraph 
+langchain 
+langchain-openai 
+langchain-tavily 
+langchain-chroma 
+langsmith 
+fastapi 
+uvicorn 
+pydantic 
+pydantic-settings 
+chromadb 
+asyncpg 
+python-dotenv 
+httpx 

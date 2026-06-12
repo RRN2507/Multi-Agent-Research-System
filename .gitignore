@@ -1,0 +1,8 @@
+__pycache__/ 
+*.pyc 
+.env 
+chroma_db/ 
+*.log 
+.DS_Store 
+*.pdf 
+INTERVIEW_PREP.md 

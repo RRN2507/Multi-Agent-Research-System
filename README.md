@@ -2,6 +2,11 @@
 
 > **Autonomously researches any topic, verifies claims, and delivers structured Markdown reports — powered by LangGraph Supervisor-Worker architecture.**
 
+<img width="937" height="460" alt="Screenshot 2026-06-14 115319" src="https://github.com/user-attachments/assets/9365010c-a129-4137-b703-9daa8805ca89" />
+<img width="1563" height="865" alt="Screenshot 2026-06-14 115929" src="https://github.com/user-attachments/assets/b110fae5-9833-4c2e-977b-e293b6f25d2a" />
+<img width="999" height="571" alt="Screenshot 2026-06-14 121254" src="https://github.com/user-attachments/assets/e2d4e1f5-cb42-4509-b0f2-72b0c449555d" />
+<img width="560" height="525" alt="Screenshot 2026-06-14 122240" src="https://github.com/user-attachments/assets/37dc78a5-7ee9-4b96-832e-5d8a9b72aaae" />
+
 
 ---
 

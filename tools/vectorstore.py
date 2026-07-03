@@ -1,6 +1,5 @@
-from langchain_chroma import Chroma
-from langchain_chroma import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+﻿from langchain_chroma import Chroma
+from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_core.tools import tool
 from langchain_core.documents import Document
 from config import get_settings
@@ -15,11 +14,7 @@ _vectorstore = None
 def get_vectorstore():
     global _vectorstore
     if _vectorstore is None:
-        embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2",
-            model_kwargs={'device': 'cpu'},
-            encode_kwargs={'normalize_embeddings': True}
-        )
+        embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
         _vectorstore = Chroma(
             persist_directory=settings.chroma_persist_dir,
             embedding_function=embeddings,

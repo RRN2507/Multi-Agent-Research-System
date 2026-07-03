@@ -4,7 +4,7 @@ langchain-groq
 langchain-community
 langchain-tavily
 langchain-chroma
-sentence-transformers
+fastembed
 langsmith
 fastapi
 uvicorn[standard]

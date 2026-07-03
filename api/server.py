@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+﻿from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
@@ -112,6 +112,21 @@ async def health_check():
     return {"status": "healthy", "service": "multi-agent-research"}
 
 
+@app.get("/")
+async def root():
+    return {
+        "service": "Multi-Agent Research System",
+        "status": "live",
+        "docs": "/docs",
+        "endpoints": {
+            "POST /invoke": "Run a research query, returns final report",
+            "POST /stream": "Run a research query, streams agent events (SSE)",
+            "GET /health": "Health check",
+            "GET /threads/{thread_id}/state": "Get state for a thread",
+        },
+    }
+
+
 @app.get("/threads/{thread_id}/state")
 async def get_thread_state(thread_id: str):
     config = {"configurable": {"thread_id": thread_id}}
@@ -123,5 +138,7 @@ async def get_thread_state(thread_id: str):
 
 
 if __name__ == "__main__":
+    import os
     import uvicorn
-    uvicorn.run("api.server:app", host=settings.api_host, port=settings.api_port, workers=settings.api_workers, reload=True)
+    port = int(os.environ.get("PORT", settings.api_port))
+    uvicorn.run("api.server:app", host=settings.api_host, port=port, workers=settings.api_workers)
